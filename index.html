@@ -1,17 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>drago</title>
- <link rel="styleheet" href="style.css"
-    <header class="cabeçalho">
-    <img src="./o-desafiante-fica-em-frente-a-ilustracao-do-castelo-assustador.jpg" alt="">  
-    
-    
-    <img src="" alt="">
-</header>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Basquete</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-seu espirito guerreiro
+    <header>
+        <div class="container">
+            <h1>Loja de Basquete</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <section id="home">
+        <div class="container">
+            <h2>Bem-vindo à nossa loja de basquete!</h2>
+            <p>Encontre os melhores produtos para o seu jogo de basquete aqui.</p>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="produto">
+                <img src="img/bola.jpg" alt="Bola de Basquete">
+                <h3>Bola de Basquete</h3>
+                <p>Preço: R$ 199,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="img/tênis de basquete.jpg" alt="tênis de Basquete">
+                <h3>tênis de Basquete</h3>
+                <p>Preço: R$ 349,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="img/jersey.jpg" alt="Camiseta de Basquete">
+                <h3>Camiseta de Basquete</h3>
+                <p>Preço: R$ 129,90</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma loja especializada em produtos de basquete, oferecendo itens de alta qualidade para jogadores e entusiastas do esporte.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="enviar_mensagem.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Basquete. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    max-width: 200px;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
